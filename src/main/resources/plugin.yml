@@ -1,0 +1,15 @@
+name: TouchGrass
+version: '1.0'
+main: com.noctify.TouchGrass
+api-version: '1.21'
+commands:
+  resetgrass:
+    description: Reset grass timer for a player
+    usage: /resetgrass <@a|@s|player>
+  applygrass:
+    description: Apply grass effect to a player
+    usage: /applygrass <@a|@s|player>
+permissions:
+  touchgrass.bypass:
+    description: People who don't have to touch grass
+    default: op

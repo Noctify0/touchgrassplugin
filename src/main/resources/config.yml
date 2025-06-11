@@ -1,0 +1,19 @@
+# In seconds
+player_playtime: 7200
+
+# What players will see when they reach the playtime limit
+title:
+  main: "§a🌿Touch Grass🌿"
+  subtitle: ""
+  fadein: 0
+  stay: 40
+  fadeout: 0
+
+# The effetcs applied to players who reach the playtime limit
+effects:
+  - type: BLINDNESS
+    duration: 2147483647 # Integer.MAX_VALUE
+    amplifier: 9
+    ambient: false
+    particles: false
+    icon: false
