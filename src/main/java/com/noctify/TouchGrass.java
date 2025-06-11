@@ -67,11 +67,11 @@ public class TouchGrass extends JavaPlugin implements Listener {
         for (Map<?, ?> eff : getConfig().getMapList("effects")) {
             try {
                 PotionEffectType type = PotionEffectType.getByName((String) eff.get("type"));
-                int duration = (int) eff.getOrDefault("duration", Integer.MAX_VALUE);
-                int amplifier = (int) eff.getOrDefault("amplifier", 0);
-                boolean ambient = (boolean) eff.getOrDefault("ambient", false);
-                boolean particles = (boolean) eff.getOrDefault("particles", false);
-                boolean icon = (boolean) eff.getOrDefault("icon", false);
+                int duration = eff.get("duration") instanceof Number ? ((Number) eff.get("duration")).intValue() : Integer.MAX_VALUE;
+                int amplifier = eff.get("amplifier") instanceof Number ? ((Number) eff.get("amplifier")).intValue() : 0;
+                boolean ambient = eff.get("ambient") instanceof Boolean ? (Boolean) eff.get("ambient") : false;
+                boolean particles = eff.get("particles") instanceof Boolean ? (Boolean) eff.get("particles") : false;
+                boolean icon = eff.get("icon") instanceof Boolean ? (Boolean) eff.get("icon") : false;
                 if (type != null) {
                     effects.add(new PotionEffect(type, duration, amplifier, ambient, particles, icon));
                 }
