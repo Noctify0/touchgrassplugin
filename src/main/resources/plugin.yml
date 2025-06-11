@@ -12,4 +12,4 @@ commands:
 permissions:
   touchgrass.bypass:
     description: People who don't have to touch grass
-    default: op
+    default: false
